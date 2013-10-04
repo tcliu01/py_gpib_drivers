@@ -29,10 +29,5 @@ class regutils:
                 else:
                     return -1
         return -1
-    CHARGERADDR=0x22
-    PMICADDR=0x23
-    FGADDR=0x36
-    HAPTICADDR=0x48
-    RTCADDR=0x68
-       
+    
                 
