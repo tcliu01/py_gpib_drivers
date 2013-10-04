@@ -1,0 +1,13 @@
+#!/bin/bash
+
+rm -r i2c-tools*
+wget http://dl.lm-sensors.org/i2c-tools/releases/i2c-tools-3.1.0.tar.bz2
+tar jxf i2c-tools-3.1.0.tar.bz2
+cp smbusmodule.c i2c-tools-3.1.0/py-smbus
+pushd i2c-tools-3.1.0
+make EXTRA=py-smbus
+pushd py-smbus
+sudo python setup.py install
+popd
+popd
+rm -r i2c-tools*
