@@ -11,7 +11,7 @@ class regutils:
     def set_value(val, offs, width, newval):
         mask = (1 << width) - 1
         val &= ~(mask << offs)
-        val |= (newval & mask) << off
+        val |= (newval & mask) << offs
         return val
 
     # for Raspberry pi
