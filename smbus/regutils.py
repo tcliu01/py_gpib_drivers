@@ -6,6 +6,12 @@ class regutils:
         val = bus.read_byte_data(addr, reg)
         modval = regutils.set_value(val, offs, width, newval)
         bus.write_byte_data(addr, reg, modval)
+        
+    @staticmethod
+    def read_modify_write_byte_16b(bus, addr, reg, offs, width, newval):
+        val = bus.read_byte_data_16b(addr, reg)
+        modval = regutils.set_value(val, offs, width, newval)
+        bus.write_byte_data_16b(addr, reg, modval)
 
     @staticmethod
     def set_value(val, offs, width, newval):
